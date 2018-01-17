@@ -1,0 +1,79 @@
+body, html {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(225,225,225,0.25);
+
+
+}
+
+
+.wrapper{
+  width: 100%;
+  height:100%;
+//  background-color: black;
+}
+
+
+
+
+    b{
+      color: white;
+      font-family: 'Supermercado One', cursive;
+    }
+    .leading-header > p {
+
+      font-size: 35px;
+      font-family: 'Supermercado One', cursive;
+      text-align: center;
+      text-decoration: underline;
+
+    }
+
+    .leading-header {
+       height: 60px;
+       margin-top:3%;
+    }
+
+      .blocks{
+        background-color: gray;
+      }
+
+      .pic{
+        height: 200px;
+        margin: 20px;
+        border-radius: 4px;
+      }
+
+      .pic:hover{
+        box-shadow: 2px 1px 10px 2px rgba(225,225,225,0.8);
+        transition: all 0.3s ease-out;
+      }
+
+      .shadow{
+         box-shadow: 12px 12px 20px 6px rgba(225,225,225,0.8);
+
+      }
+      .shrink-to-fit {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover, contain;
+      }
+      .image-one{
+        background-image: url('../resource/sand_storm.jpg');
+      }
+      .image-two{
+        background-image: url('../resource/ford_mustang.jpg');
+      }
+
+      .image-three{
+        background-image: url('../resource/classical_music.jpg');
+      }
+
+      .image-four{
+          background-image: url('../resource/downtown_toronto.jpg');
+      }
+      .image-five{
+          background-image: url('../resource/evening_traffic.jpg');
+      }
