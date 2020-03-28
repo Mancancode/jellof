@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'monospace', sans-serif;
+}
+/* Sections */
+section{
+    position: relative;
+    widows: 100%;
+    min-height:100vh ;
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff2562;
+    clip-path:polygon(54% 0, 100% 0, 100% 100%, 84% 100%) ;
+    /*Fading animation*/
+    animation: fade-in 0.5s ease-in forward;
+    animation-delay: 1.5s;
+    opacity: 0s;
+}
+section .content{
+    position: relative;
+    padding: 100px 50px 100px 150px;
+    box-sizing: border-box;
+    animation: left-in 0.5s ease-in forward;
+    animation-delay: 0.5s;
+    opacity: 0s;
+
+}
+section .content h2{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+}
+section .content p{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Learn more button */
+section .content a {
+    position: relative;
+    padding: 15px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff2562;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+section .content a:hover{
+    color: black;
+}
+section .imgBox{
+    position: relative;
+    padding-right: 100px;
+}
+section .imgBox img{
+    max-width: 500px;
+    animation: left-in 0.5s ease-in forward;
+    animation-delay: 2s;
+    opacity: 0s;
+}
+
+/* social media  button */
+.soc{
+    position: absolute;
+    bottom: 75px;
+    left: 150px;
+    display: flex;
+    animation: left-in 0.5s ease-in forward;
+    animation-delay: 1s;
+    opacity: 1s;
+}
+.soc li{
+    list-style: none;
+}
+
+.soc li a{
+    font: 0.9rem;
+    margin-right: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+.soc li a:hover{
+    color: #ff2562;
+}
+
+/* Navigation Bar  */
+.nav{
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    border-left: 5px solid #ff2562;
+    padding: 20px;
+    display: flex;
+    animation: left-in 0.5s ease-in forward;
+    animation-delay: 0.5s;
+    opacity: 1s;
+}
+.nav li{
+    list-style: none;
+}
+.nav li a{
+    font: 0.9rem;
+    margin-right: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.active,
+.nav li a:hover{
+    color: #ff2562;
+}
+
+/* Cool frame designes  */
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes left-in {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+   100%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
