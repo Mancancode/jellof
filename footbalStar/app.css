@@ -28,25 +28,32 @@ section::before {
   background: #ff2562;
   clip-path: polygon(54% 0, 100% 0, 100% 100%, 84% 100%);
   /*Fading animation*/
-  animation: fade-in 0.5s ease-in;
+  animation-delay: 1.5s;
+  animation: fade-in 2.5s ease-in;
+  
 }
 
 section .content {
-  animation: left-in 0.5s ease-in;
   box-sizing: border-box;
   padding: 100px 50px 100px 150px;
   position: relative;
+  animation-delay: 1.5s;
+  animation: left-in 2.5s ease-in;
+  
+    
 }
 
 section .content h2 {
   color: #fff;
   font-size: 3rem;
   font-weight: 800;
+  
 }
 
 section .content p {
   color: #fff;
   font-size: 1.2rem;
+  
 }
 
 /* Learn more button */
@@ -71,6 +78,9 @@ section .content a:hover {
 section .imgBox {
   padding-right: 100px;
   position: relative;
+  animation-delay: 1.5s;
+  animation: left-in 2s ease-in;
+  
 }
 
 section .imgBox img {
@@ -85,6 +95,8 @@ section .imgBox img {
   display: flex;
   left: 150px;
   position: absolute;
+  animation-delay: 1.5s;
+  animation: left-in 1.5s ease-in;
 }
 
 .soc li {
@@ -93,7 +105,7 @@ section .imgBox img {
 
 .soc li a {
   color: #fff;
-  font: 0.9rem;
+  font-size: 0.9rem;
   margin-right: 30px;
   text-decoration: none;
 }
@@ -104,13 +116,14 @@ section .imgBox img {
 
 /* Navigation Bar  */
 .nav {
-  animation: left-in 0.5s ease-in;
   border-left: 5px solid #ff2562;
   display: flex;
   left: 150px;
-  padding: 20px;
+  padding-left: 20px;
   position: absolute;
   top: 75px;
+  animation-delay: 1.5s;
+  animation: left-in 2s ease-in;
 }
 
 .nav li {
@@ -120,7 +133,7 @@ section .imgBox img {
 .nav li a {
   color: #fff;
   font-weight: 700;
-  font: 0.9rem;
+  font-size: 0.9rem;
   margin-right: 30px;
   text-decoration: none;
   text-transform: uppercase;
@@ -144,11 +157,11 @@ section .imgBox img {
 
 @keyframes left-in {
   from {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-200%,0,0);
     visibility: visible;
   }
 
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0,0,0);
   }
 }
