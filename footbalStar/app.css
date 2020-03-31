@@ -144,6 +144,24 @@ section .imgBox img {
   color: #ff2562;
 }
 
+#hamburgerBtn{
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  background-size: 30px;
+  background-repeat:none;
+  display: none;
+  z-index: 1000;
+  
+}
+#hamburgerBtn:hover{
+  cursor: pointer;
+  color: yellow;
+}
+
 /* Cool frame designes  */
 @keyframes fade-in {
   from {
@@ -165,3 +183,43 @@ section .imgBox img {
     transform: translate3d(0,0,0);
   }
 }
+
+
+
+@media only screen and (max-width:965px){
+  body{
+      margin-left: 0;
+  }
+  #hamburgerBtn:hover{
+      color: #be8211;
+  }
+ 
+  /* Navbar of the hambuger button*/
+  #nav{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background: rgb(0,0,0,.95);
+    flex-direction: column;
+    z-index: 11;
+    border: none;
+    padding:50px 0;
+    justify-content:space-evenly;
+    transition: transform 500ms;
+    transform: translateX(open);
+  
+  }
+  #nav.open{
+      transform: translateX(0);
+      left: -1000px;
+  }
+  .nav li{
+      text-align: center;
+  }
+  #hamburgerBtn{
+      display: inline-block;
+  }
+}
+
