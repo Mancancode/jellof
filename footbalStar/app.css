@@ -186,7 +186,7 @@ section .imgBox img {
 
 
 
-@media only screen and (max-width:965px){
+@media only screen and (max-width:991px){
   body{
       margin-left: 0;
   }
@@ -216,7 +216,39 @@ section .imgBox img {
       left: -1000px;
   }
   .nav li{
+      margin: 5px 0;
       text-align: center;
+      
+  }
+  section{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  
+  section .content h2{
+    font-size: 2rem;
+  }
+  section .content p{
+    font-size: 1.2em;
+  }
+  section .content{
+    padding: 80px ;
+    margin-top: 50px;
+  }
+  section .content a{
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+  section .imgBox img{
+    max-width: 300px;
+  }
+  .soc{
+    left: 5px;
+    bottom: 30px;
+    padding-left: 60px;
+  }
+  section::before{
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 26%);
   }
   #hamburgerBtn{
       display: inline-block;
