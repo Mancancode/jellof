@@ -5,7 +5,6 @@ body{
 }
 
 
-
 ul{
     display: flex;
     position: relative;
@@ -16,6 +15,8 @@ ul{
     padding-top: 25rem;
     transform: translate(-50%, -50%);
 }
+
+
 
 
 ul li{
@@ -77,10 +78,8 @@ ul li:nth-child(5) a:hover .fa{
 ul li:nth-child(6) a:hover .fa{
     color: #0077B5;
 }
-<div></div>
-<div></div>
+
 
 <div></div>
-
-<div></div>
+<div></div
 
