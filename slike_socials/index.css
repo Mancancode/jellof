@@ -3,6 +3,8 @@ body{
     padding:0;
     background: #886d6d ;
 }
+left: 50%;
+background: #886d6d ;
 ul{
     display: flex;
     position: relative;
