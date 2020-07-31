@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+   
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="index.css" />
+    <title>Bekky foods</title>
+</head>
+<body>
+    <div class="container" >
+        <header id="navbar">
+            <a href="#" class="logo">BOLE  <strong style="color: #9d9e9d;">&</strong> <span> FISH</span></a>
+            <ul>
+                <li><a href="#" class="active">Home</a>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+            </ul>
+            
+
+        <span class="menuIcon" onclick="menuToggle();"></span>
+        </header>
+        <div class="content">
+            <div class="bannerText" id="slideshowText">
+                <div class="active">
+                    <h2>EAT Healthy <br> stay Healthy</h2>
+                    <p>For the love of bole and fish, we sell portharcourt grade bole and fish with the best
+                         mouth-watering sauce served fresh from the pot. 
+                         we also deliver anywhere around portharcourt city, 
+                        place your order we deliver to your doorstep.</p>
+                        <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h2>EAT Your <br> Vegitables</h2>
+                    <p>For the love of bole and fish,
+                         we sell portharcourt grade bole and fish with 
+                         the best mouth-watering sauce served fresh from the pot. 
+                         we also deliver anywhere around portharcourt city,
+                         place your order we deliver to your doorstep.</p>
+                        <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h2>Good Food <br> Good Mood</h2>
+                    <p>For the love of bole and fish,
+                         we sell portharcourt grade bole and fish with
+                          the best mouth-watering sauce served fresh from the pot.
+                           we also deliver anywhere around portharcourt city,
+                         place your order we deliver to your doorstep.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="bannerImg" id="slideshow">
+                <img src="images/bole4.jpeg" class="active"> 
+                <img src="images/bole3.jpeg">   
+                <img src="images/bole1.jpg">
+                <img src="images/b1.jpeg">    
+            </div>
+        </div>
+        <div class="icons">
+            <ul class="socials">
+                <li><a class="soc" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="soc" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a class="soc" href="#"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a  class="soc" href="#"><i class="fa fa-instagram"></i></a></li>
+               
+            </ul>
+            <ul class="controls">
+                <li><a class="cont" ><i class="fa fa-angle-double-left" onclick="nextSlide();nextslidesText(); "></i></a></li>
+                <li><a class="cont"><i class="fa fa-angle-double-right" onclick="prevSlide(); prevslidesText();"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--JAVASCRIPT CODE-->
+    <script type="text/javascript">
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+
+    function nextSlide(){
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }
+    function prevSlide(){
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    }
+
+    
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+
+    function nextslidesText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+    function prevslidesText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+    function menuToggle(){
+        var nav = document.getElementById('navbar')
+        nav.classList.toggle('active')
+    }
+    </script>
+</body>
+</html>

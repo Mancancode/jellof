@@ -1,0 +1,356 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+.container{
+    text-decoration: none;
+    padding: 0 100px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/*this changes the backgroung style*/
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    z-index: -2;
+    background: #333;
+}
+
+.container::after{
+    content: 'Healthy';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18vw;
+    z-index: -2;
+    font-weight: 700;
+    color: #333;
+    opacity: 0.2;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    text-decoration: none;
+}
+header .logo{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
+header .logo span{
+    color: #78ff00;
+}
+header ul{
+           
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+    margin: 0 20px;
+    text-decoration: none;
+}
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 4px 10px;
+}
+
+/*this to effect of the last two navbar contact and about*/
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a
+{
+    color: #fff;
+}
+
+header ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #78ff00;
+    z-index: -1;
+    transform: 0.5s ease-in-out;
+}
+
+header ul li a:hover:before,
+header ul li a.active:before{
+    width: 40px;
+}
+
+ .content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.content .bannerText
+{
+    position: relative;
+    max-width: 500px;
+    margin-right: 50px;
+}
+.content .bannerText div
+{
+    display: none;
+}
+.content .bannerText div.active
+{
+    display: initial;
+}
+/*image span*/
+
+.content .bannerText h2{
+    font-size: 53px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #333;
+}
+.content .bannerText p{
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8em;
+    margin: 20px 0;
+}
+.content .bannerText a{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+}
+ .content .bannerText a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: #78ff00;
+    z-index: -1;
+    transform: 0.5s ease-in-out;
+}
+
+.content .bannerText a:hover:before,
+.content .bannerText a.active:before{
+    width: 100%;
+}
+.content .bannerImg {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background: #000;
+
+}
+.content .bannerImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    opacity: 0;
+}
+.content .bannerImg img.active{
+    opacity: 2;
+} 
+/*icons*/
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px 0px;
+}
+.icons .socials,
+.icons .controls {
+    position: relative;
+    display: flex;
+}
+
+/*socials*/
+
+.icons .socials{
+    padding-left: 0px;
+}
+.icons .socials li{
+    list-style: none;
+    margin-right: 30px;
+    
+}
+.icons .socials li .soc{
+    display: inline-block;
+    max-height: 24px;
+    transition: 0.5s ease-in-out;
+    font-size: 30px;
+    color: #333;
+}
+.icons .socials li:hover .soc{
+    transform: translateY(-15px);
+    color: #78ff00;
+}
+
+/*controls*/
+
+.icons .controls li{
+    list-style: none;
+    margin-left: 30px;
+    cursor: pointer;
+    
+    color: #fff;
+
+}
+.icons .controls li .cont{
+    display: inline-block;
+    max-height: 24px;
+    transition: 0.5s ease-in-out;
+    font-size: 50px;
+    margin: 20px;
+    color: white;
+}
+.icons .controls li:hover .cont{
+   
+    color: #78ff00;
+}
+
+.menuIcon{
+    display: none;
+}
+
+@media (max-width: 992px)
+{
+    .container{
+        padding: 20px 50px ;
+    }
+    .container::before{
+        display: none;
+    }
+    header{
+        padding: 0;
+    }
+    .controls .cont .fa {
+        filter: invert(0);
+        color: #000;
+    }
+    .controls .cont .fa:hover{
+        color: #78ff00;
+    }
+    .content .bannerText h2
+    {
+        font-size: 30px;
+    }
+    .content{
+        flex-direction: column-reverse;
+        margin-top: 0;
+    }
+    .content .bannerImg{
+        width: 100%;
+        height: 40vh;
+        margin:20px 0;
+    }
+    .content .bannerText
+    {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    header ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 10000;
+        padding: 100px 0;
+    }
+    header.active ul{
+        display: initial;
+    }
+
+    header ul li{
+        padding: 20px;
+        text-align: center;
+    }
+    header ul li a{
+        color: #333 !important;
+        font-size: 36px;
+    }
+    header ul li a:hover:before,
+    header ul li a.active:before{
+    width: 100%;
+    }
+    .menuIcon{
+        display: initial;
+        position: fixed;
+        right: 50px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 100000;
+        background: #fff url(images/open.png);
+        width: 34px;
+        height: 34px;
+        background-repeat:no-repeat ;
+        background-position: 6px;
+    }
+    header.active .menuIcon
+    {
+        
+        background: #fff url(images/close.png);
+        background-repeat:no-repeat ;
+        background-position: 6px;
+        
+    }
+
+
+}
+
+@media (max-width: 767px){
+    .container{
+        padding: 20px 30px;
+    }
+    .menuIcon{
+        right: 30px;
+    }
+    .icons .controls li img{
+        max-width: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
