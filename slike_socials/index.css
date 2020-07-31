@@ -3,8 +3,7 @@ body{
     padding:0;
     background: #886d6d ;
 }
-left: 50%;
-background: #886d6d ;
+
 ul{
     display: flex;
     position: relative;
@@ -19,9 +18,8 @@ ul{
 
 ul li{
     list-style: none;
+    text-decoration:none;
 }
-
-
 
 ul li a{
     position: relative;
